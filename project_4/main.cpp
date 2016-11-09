@@ -2,9 +2,8 @@
 #include <fstream>
 #include <iomanip>
 #include <time.h>
-#include "lib.h"
 #include <armadillo>
-
+#include "lib.h"
 
 using namespace std;
 
@@ -12,7 +11,7 @@ inline int periodic(int i, int limit, int add) {
     return (i+limit+add) % (limit);
 }
 
-arma::imat initialize(arma::imat matrix, int n_spins, double& E, double& M)
+arma::imat initialize (arma::imat matrix, int n_spins, double& E, double& M)
 {
     srand (time(NULL));
     for(int i = 0; i< n_spins; i++){
@@ -44,33 +43,58 @@ arma::imat initialize(arma::imat matrix, int n_spins, double& E, double& M)
     return matrix;
 }
 
-arma::imat Metropolis(int n_spins, arma::imat spin_matrix, double& E, double& M, double* w)
+arma::imat Metropolis(int n_spins, arma::imat spin_matrix, double& E, double& M, double* w, long& idum)
 {
     // loop over all spins
     for(int y =0; y < n_spins; y++) {
         for (int x= 0; x < n_spins; x++){
-    // Find random position
-            int ix = (int) rand() % n_spins;
-            int iy = (int) rand() % n_spins;
+            // Find random position
+            int ix = (int) ran1(&idum) * n_spins;
+            int iy = (int) ran1(&idum) * n_spins;
+
             int deltaE = 2*spin_matrix(iy, ix)*
                                              (spin_matrix(iy, periodic(ix,n_spins,-1))+
                                               spin_matrix(periodic(iy,n_spins,-1), ix) +
                                               spin_matrix(iy, periodic(ix,n_spins,1)) +
                                               spin_matrix(periodic(iy,n_spins,1), ix));
-            // Here we perform the Metropolis test
-
-            float r = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-
-            if ( r <= w[deltaE+8] ) {
+            if(deltaE <= 0)
+            {
                 spin_matrix(iy, ix) *= -1; // flip one spin and accept new spin config
                 // update energy and magnetization
                 M += (double) 2*spin_matrix(iy, ix);
                 E += (double) deltaE;
             }
+            else if(deltaE > 0)
+            {
+                double r = ran1(&idum);
+                if ( r <= w[deltaE+8] )
+                {
+                    spin_matrix(iy, ix) *= -1; // flip one spin and accept new spin config
+                    // update energy and magnetization
+                    M += (double) 2*spin_matrix(iy, ix);
+                    E += (double) deltaE;
+                }
+            }
         }
     }
-
     return spin_matrix;
+}
+
+void output(arma::imat spin_matrix, double* average, int n_spins, int m_carlos)
+{
+    double over_iter = 1/(double) m_carlos;
+    double E = average[0] * over_iter;
+    double EE = average[1] * over_iter;
+
+    double M = average[2] * over_iter;
+    double MM = average[3] * over_iter;
+    double M_abs = average[4] * over_iter;
+
+    double E_var = (EE - E*E )/n_spins/n_spins;
+    double M_var = (MM - M_abs * M_abs)/n_spins/n_spins;
+
+    cout << "Variance in energy: " << E_var << endl;
+    cout << "Variance in magnetization: " << M_var << endl;
 }
 
 int main(int argc, char *argv[])
@@ -94,6 +118,9 @@ int main(int argc, char *argv[])
     }
 
     arma::imat spin_matrix(n_spins, n_spins);
+    spin_matrix.zeros();
+
+    long idum = -1;
 
     for(double temp = init_temp; temp <= final_temp ; temp += step_temp){
         E = 0;
@@ -101,18 +128,16 @@ int main(int argc, char *argv[])
 
         for(int de = -8; de <= 8; de ++) w[de+8] = 0;
         for(int de = -8; de <= 8; de +=4) w[de+8] = exp(-de/temp);
-
-
         for(int i = 0; i<5 ; i++ ) average[i] =0;
+        spin_matrix = initialize (spin_matrix,  n_spins,  E,  M);
 
-        spin_matrix = initialize(spin_matrix, n_spins, E, M);
-        spin_matrix.print();
         for(int i = 0 ; i<=max_carlos; i++)
         {
-            spin_matrix = Metropolis(n_spins, spin_matrix, E, M, w);
+            spin_matrix = Metropolis(n_spins, spin_matrix, E, M, w, idum);
+
             average[0] += E; average[1] += E*E;
             average[2] += M; average[3] += M*M; average[4] += fabs(M);
         }
+        output(spin_matrix, average, n_spins, max_carlos);
     }
-
 }
