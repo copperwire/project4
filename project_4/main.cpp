@@ -49,9 +49,10 @@ arma::imat Metropolis(int n_spins, arma::imat spin_matrix, double& E, double& M,
     for(int y =0; y < n_spins; y++) {
         for (int x= 0; x < n_spins; x++){
             // Find random position
-            int ix = (int) ran1(&idum) * n_spins;
-            int iy = (int) ran1(&idum) * n_spins;
+            int ix = (int) (ran1(&idum) * (double) n_spins);
+            int iy = (int) (ran1(&idum) * (double) n_spins);
 
+            cout << ix << "  " << iy << endl;
             int deltaE = 2*spin_matrix(iy, ix)*
                                              (spin_matrix(iy, periodic(ix,n_spins,-1))+
                                               spin_matrix(periodic(iy,n_spins,-1), ix) +
@@ -59,7 +60,10 @@ arma::imat Metropolis(int n_spins, arma::imat spin_matrix, double& E, double& M,
                                               spin_matrix(periodic(iy,n_spins,1), ix));
             if(deltaE <= 0)
             {
+                //cout << "-----------------interim--------------" << endl;
                 spin_matrix(iy, ix) *= -1; // flip one spin and accept new spin config
+                //spin_matrix.print();
+                //cout << "-----------------exterim--------------" << endl;
                 // update energy and magnetization
                 M += (double) 2*spin_matrix(iy, ix);
                 E += (double) deltaE;
@@ -77,6 +81,8 @@ arma::imat Metropolis(int n_spins, arma::imat spin_matrix, double& E, double& M,
             }
         }
     }
+    spin_matrix.print();
+    cout << "--------------hello-------------" << endl;
     return spin_matrix;
 }
 
