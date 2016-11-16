@@ -87,8 +87,9 @@ arma::imat Metropolis(int n_spins, arma::imat spin_matrix, double& E, double& M,
             double r2 = ((double) rand() / (RAND_MAX)) ;
             double r3 = ((double) rand() / (RAND_MAX)) ;
 
-            int ix = (int) (r1 * (double) n_spins);
-            int iy = (int) (r2 * (double) n_spins);
+            int ix = (int) (r1 * (double) (n_spins -1));
+            int iy = (int) (r2 * (double) (n_spins -1));
+
             int deltaE = 2*spin_matrix(iy, ix)*
                                              (spin_matrix(iy, periodic(ix,n_spins,-1))+
                                               spin_matrix(periodic(iy,n_spins,-1), ix) +
@@ -129,9 +130,7 @@ void output(double temperature, double* average, int n_spins, int counter_accept
     // ofile << setw(15) << setprecision(8) << Maverage/n_spins/n_spins;
     ofile << setw(15) << setprecision(8) << M_var/temperature;
     ofile << setw(15) << setprecision(8) << M_abs/n_spins/n_spins;
-    ofile << setw(15) << setprecision(8) << (double)counter_accept*over_iter << endl;
-
-
+    ofile << setw(15) << setprecision(8) << (double) counter_accept << endl;
 }
 
 int main(int argc, char *argv[])
@@ -141,7 +140,7 @@ int main(int argc, char *argv[])
     double w[17], average[5];
     double init_temp = 2.4;
     double final_temp = 2.4;
-    double step_temp = 1.4;
+    double step_temp = 0.1;
     double E, M  = 0;
     string initial_type = "random";
 
@@ -181,14 +180,18 @@ int main(int argc, char *argv[])
             average[0] += E; average[1] += E*E;
             average[2] += M; average[3] += M*M; average[4] += fabs(M);
 
-            /*
+
             if(writer_controller == write_every_n){
                 output(temp, average, n_spins, counter_accept, i+1);
                 writer_controller = 0;
+                cout <<  (i / (double) max_carlos ) * 100 << "%\r";
+                cout.flush();
             }
             writer_controller ++;
-            */
+
+
         }
+        //output(temp, average, n_spins, counter_accept, max_carlos);
     }
     ofile.close();
 }

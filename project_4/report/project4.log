@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.11)  11 NOV 2016 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.11)  16 NOV 2016 21:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,6 +382,11 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 Package: dirtytalk 2010/11/21 A package making "quoting" easier
 \c@dirtytalk@qdepth=\count121
 )
+(/usr/share/texlive/texmf-dist/tex/latex/lstaddons/lstautogobble.sty
+Package: lstautogobble 2012/05/03 v0.1 Implements 'autogobble' option for 'list
+ings'
+\lstag@spacecount=\count122
+)
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
 Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
 \symwasy=\mathgroup4
@@ -390,50 +395,91 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count122
+\c@float@type=\count123
 \float@exts=\toks21
 \float@box=\box30
 \@float@everytoks=\toks22
 \@floatcapt=\box31
-) (./project4.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count124
+\c@ALG@rem=\count125
+\c@ALG@nested=\count126
+\ALG@tlm=\skip47
+\ALG@thistlm=\skip48
+\c@ALG@Lnr=\count127
+\c@ALG@blocknr=\count128
+\c@ALG@storecount=\count129
+\c@ALG@tmpcounter=\count130
+\ALG@tmplength=\skip49
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\@float@every@algorithm=\toks23
+\c@algorithm=\count131
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+) (./project4.aux
+
+LaTeX Warning: Label `eq:chi' multiply defined.
+
+)
 \openout1 = `project4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 16.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 16.
-\c@lstlisting=\count123
+LaTeX Font Info:    ... okay on input line 29.
+\c@lstlisting=\count132
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
+\scratchcounter=\count133
 \scratchdimen=\dimen129
 \scratchbox=\box32
-\nofMPsegments=\count125
-\nofMParguments=\count126
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count127
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count136
 \MPscratchDim=\dimen130
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -454,7 +500,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -462,163 +508,179 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count130
+\c@section@level=\count139
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
 
 (./project4.out) (./project4.out)
 \@outlinefile=\write3
 \openout3 = `project4.out'.
 
-LaTeX Font Info:    Try loading font information for U+wasy on input line 20.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 33.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-Overfull \hbox (2.7945pt too wide) in paragraph at lines 27--27
-[][]\OT1/cmr/bx/n/14.4 Programatically solv-ing the two-dimensional ising model
- 
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 33.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+Overfull \hbox (1.46677pt too wide) in paragraph at lines 44--45
+\OT1/cmr/m/n/12 con-fig-u-ra-tions is known col-lo-qui-ally as ther-mo-dy-nam-i
+cs, or sta-tis-ti-cal physics.
  []
-
-
-Package hyperref Warning: Suppressing empty link on input line 41.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<exp_vals.png, id=30, 887.4756pt x 728.4816pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
+
+ []
+
+[5] [6] <exp_vals.png, id=126, 887.4756pt x 728.4816pt>
 File: exp_vals.png Graphic file (type png)
  <use exp_vals.png>
-Package pdftex.def Info: exp_vals.png used on input line 57.
+Package pdftex.def Info: exp_vals.png used on input line 233.
 (pdftex.def)             Requested size: 443.73671pt x 364.23991pt.
 
-<exp_vals_2.png, id=32, 1237.2624pt x 845.559pt>
+<exp_vals_2.png, id=128, 990.099pt x 833.2731pt>
 File: exp_vals_2.png Graphic file (type png)
  <use exp_vals_2.png>
-Package pdftex.def Info: exp_vals_2.png used on input line 62.
-(pdftex.def)             Requested size: 618.62968pt x 422.77847pt.
+Package pdftex.def Info: exp_vals_2.png used on input line 238.
+(pdftex.def)             Requested size: 495.0483pt x 416.63553pt.
 
-Overfull \hbox (114.81866pt too wide) in paragraph at lines 62--63
-[]| [][] 
- []
-
-<exp_vals_ord_1.png, id=33, 715.473pt x 586.8324pt>
+<exp_vals_ord_1.png, id=129, 715.473pt x 586.8324pt>
 File: exp_vals_ord_1.png Graphic file (type png)
  <use exp_vals_ord_1.png>
-Package pdftex.def Info: exp_vals_ord_1.png used on input line 70.
+Package pdftex.def Info: exp_vals_ord_1.png used on input line 244.
 (pdftex.def)             Requested size: 429.28712pt x 352.10216pt.
 
-Overfull \hbox (10.83438pt too wide) in paragraph at lines 70--71
-[]| [][] 
+Overfull \hbox (10.83438pt too wide) in paragraph at lines 244--245
+[]| [] 
  []
 
-[2] [3 <./exp_vals.png>] [4 <./exp_vals_2.png>]
-<exp_vals_ord_2.png, id=60, 786.2976pt x 607.7907pt>
+[7] [8 <./exp_vals.png>] [9 <./exp_vals_2.png>]
+<exp_vals_ord_2.png, id=160, 786.2976pt x 607.7907pt>
 File: exp_vals_ord_2.png Graphic file (type png)
  <use exp_vals_ord_2.png>
-Package pdftex.def Info: exp_vals_ord_2.png used on input line 75.
+Package pdftex.def Info: exp_vals_ord_2.png used on input line 249.
 (pdftex.def)             Requested size: 432.46503pt x 334.28592pt.
 
-Overfull \hbox (14.01228pt too wide) in paragraph at lines 75--76
-[]| [][] 
+Overfull \hbox (14.01228pt too wide) in paragraph at lines 249--250
+[]| [] 
  []
 
-[5 <./exp_vals_ord_1.png>]
-<accept_config_ord_1.png, id=67, 578.16pt x 433.62pt>
-File: accept_config_ord_1.png Graphic file (type png)
+[10 <./exp_vals_ord_1.png>]
+<temp_total_config.png, id=167, 578.16pt x 433.62pt>
+File: temp_total_config.png Graphic file (type png)
 
-<use accept_config_ord_1.png>
-Package pdftex.def Info: accept_config_ord_1.png used on input line 81.
+<use temp_total_config.png>
+Package pdftex.def Info: temp_total_config.png used on input line 277.
 (pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
- [6 <./exp_vals_ord_2.png>]
-<accept_config_ord_2.png, id=74, 578.16pt x 433.62pt>
-File: accept_config_ord_2.png Graphic file (type png)
+ [11 <./exp_vals_ord_2.png>]
+<accept_configs.png, id=174, 1175.1102pt x 734.9859pt>
+File: accept_configs.png Graphic file (type png)
 
-<use accept_config_ord_2.png>
-Package pdftex.def Info: accept_config_ord_2.png used on input line 86.
+<use accept_configs.png>
+Package pdftex.def Info: accept_configs.png used on input line 283.
+(pdftex.def)             Requested size: 470.03575pt x 293.98915pt.
+
+Overfull \hbox (23.13025pt too wide) in paragraph at lines 283--284
+[]| [] 
+ []
+
+[12 <./temp_total_config.png>] <PDF_T_1.png, id=181, 578.16pt x 433.62pt>
+File: PDF_T_1.png Graphic file (type png)
+
+<use PDF_T_1.png>
+Package pdftex.def Info: PDF_T_1.png used on input line 289.
 (pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
- [7 <./accept_config_ord_1.png>]
-<accept_config_1.png, id=82, 578.16pt x 433.62pt>
-File: accept_config_1.png Graphic file (type png)
- <use accept_config_1.png>
-Package pdftex.def Info: accept_config_1.png used on input line 92.
+ [13 <./accept_configs.png>]
+<PDF_T_24.png, id=189, 578.16pt x 433.62pt>
+File: PDF_T_24.png Graphic file (type png)
+ <use PDF_T_24.png>
+Package pdftex.def Info: PDF_T_24.png used on input line 294.
 (pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
+ [14 <./PDF_T_1.png>] <exp_val40.png, id=196, 578.16pt x 433.62pt>
+File: exp_val40.png Graphic file (type png)
+ <use exp_val40.png>
+Package pdftex.def Info: exp_val40.png used on input line 299.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [15 <./PDF_T_24.png>] <exp_val60.png, id=203, 578.16pt x 433.62pt>
+File: exp_val60.png Graphic file (type png)
+ <use exp_val60.png>
+Package pdftex.def Info: exp_val60.png used on input line 305.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-[8 <./accept_config_ord_2.png>]
-<accept_config.png, id=89, 578.16pt x 433.62pt>
-File: accept_config.png Graphic file (type png)
- <use accept_config.png>
-Package pdftex.def Info: accept_config.png used on input line 97.
-(pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
+[16 <./exp_val40.png>] <exp_val100.png, id=210, 578.16pt x 433.62pt>
+File: exp_val100.png Graphic file (type png)
 
-[9 <./accept_config_1.png>]
+<use exp_val100.png>
+Package pdftex.def Info: exp_val100.png used on input line 311.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [17 <./exp_val60.png>]
+<exp_val140.png, id=217, 578.16pt x 433.62pt>
+File: exp_val140.png Graphic file (type png)
+ <use exp_val140.png>
+Package pdftex.def Info: exp_val140.png used on input line 317.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [18 <./exp_val100.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
-Package caption Warning: \label without proper reference on input line 57.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:exp_t1' on page 10 undefined on input line 106.
-
-
-Package caption Warning: \label without proper reference on input line 75.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:exp_t2_ord' on page 10 undefined on input line 10
-6.
-
-
-Package caption Warning: \label without proper reference on input line 81.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:accept_config_1_ord' on page 10 undefined on inpu
-t line 106.
+ []
 
 
-Package caption Warning: \label without proper reference on input line 86.
-See the caption package documentation for explanation.
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
+
+ []
 
 
-LaTeX Warning: Reference `fig:accept_config_ord' on page 10 undefined on input 
-line 106.
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
-[10 <./accept_config.png>] [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
+ []
+
+[19 <./exp_val140.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
  (./project4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 334.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 334.
 Package rerunfilecheck Info: File `project4.out' has not changed.
-(rerunfilecheck)             Checksum: 426F2A8BB5E69BE224C86DAD7D2D4AF9;42.
+(rerunfilecheck)             Checksum: 71333AF539A5F5D37E1FD2944B3F776F;551.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
  ) 
 Here is how much of TeX's memory you used:
- 9218 strings out of 493029
- 136129 string characters out of 6136234
- 233185 words of memory out of 5000000
- 12614 multiletter control sequences out of 15000+600000
- 11822 words of font info for 44 fonts, out of 8000000 for 9000
+ 10088 strings out of 493029
+ 148753 string characters out of 6136234
+ 340598 words of memory out of 5000000
+ 13393 multiletter control sequences out of 15000+600000
+ 12373 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,39p,734b,1620s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+ 36i,10n,58p,932b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb>
-Output written on project4.pdf (11 pages, 499161 bytes).
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on project4.pdf (20 pages, 739857 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 94 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
